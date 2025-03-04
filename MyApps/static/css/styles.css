@@ -102,6 +102,9 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+.titre{
+  text-decoration: none;
+}
 .header_slide{
   margin: 0;
 }
@@ -356,19 +359,22 @@ caption {
 }
 
 th {
-  text-align: inherit;
+  text-align: center;
   text-align: -webkit-match-parent;
+  font-weight: 400;
+  
 }
 
 thead,
 tbody,
 tfoot,
 tr,
-td,
-th {
+td {
   border-color: inherit;
   border-style: solid;
   border-width: 0;
+  text-align: justify;
+  font-size: 12.5px;
 }
 
 label {

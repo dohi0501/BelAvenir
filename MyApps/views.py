@@ -15,3 +15,6 @@ def reacton_corps_vih(request, *args, **kwargs):
 
 def apres_infection_vih(request, *args, **kwargs):
     return render(request, 'apres_infection.html')
+
+def generalite_ist(request, *args, **kwargs):
+    return render(request, 'generalite_ist.html')

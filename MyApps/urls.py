@@ -10,5 +10,5 @@ urlpatterns = [
     path('vih/reaction_du_corps/', reacton_corps_vih, name='reacton_corps_vih'),
     path('vih/apres_infection_vih/', apres_infection_vih, name='apres_infection_vih'),
     # root pour les ist
-    
+    path('vih/generalite_ist/', generalite_ist, name='generalite_ist'),
 ]
