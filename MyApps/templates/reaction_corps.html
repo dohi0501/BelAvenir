@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+    {% include "header.html" %}
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            {% include "navbar.html" %}
+            <section class="bg-light py-5">
+                <div class="container py-4">
+                    <h2 class="display-5 fw-bold mouvement1">Comment le corps réagit-il face à l'infection du VIH ?</h2>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!-- Blog entries-->
+                        <div class="col-lg-8">
+                            <!-- Featured blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="{% static 'assets/img.jpeg' %}" alt="image du cycle de vie du VIH" /></a>
+                                <div class="card-body">
+                                    <h2 class="card-title" data-aos="fade-up" data-aos-delay="100">cycle de vie du VIH</h2>
+                                    <p class="card-text" data-aos="fade-up" data-aos-delay="100">
+                                        1. Circoncision masculine : <br>
+                                        - La circoncision a montré qu'elle pouvait réduire le risque de transmission du VIH lors de rapports sexuels hétérosexuels, bien qu'elle ne fournisse pas une protection totale. <br><br>
+
+                                        2. Éducation et sensibilisation : <br>
+                                        - Informer les populations à risque sur les modes de transmission, les mesures de prévention, et l'importance du dépistage est essentiel pour prévenir la propagation du VIH. <br><br>
+
+                                        3. Traitement antirétroviral (ARV) : <br>
+                                        - Les personnes vivant avec le VIH qui suivent un traitement antirétroviral efficace peuvent atteindre une charge virale indétectable, ce qui signifie qu'elles ne transmettent pas le virus (c'est le principe de "U=U", undetectable = untransmittable). <br>
+                                    </p>
+                                    <br>
+                                    <h2 class="card-title" data-aos="fade-up" data-aos-delay="100">Facteurs de risques du VIH</h2>
+                                    <p class="card-text" data-aos="fade-up" data-aos-delay="100">
+                                        Plusieurs facteurs peuvent augmenter le risque de contracter ou de transmettre le VIH :
+
+                                        1. Comportements sexuels à risque : <br>
+                                        - Relations sexuelles non protégées (sans préservatif) avec des partenaires multiples ou inconnus. <br>
+                                        - Pratiques sexuelles qui augmentent le risque de déchirures ou de saignements (par exemple, le sexe anal ou les relations sexuelles avec des partenaires ayant une charge virale élevée). <br><br>
+
+                                        2. Partage de matériel d'injection : <br>
+                                        - Utilisation de seringues ou d'aiguilles non stériles, notamment dans le cadre de l'usage de drogues injectables. <br><br>
+
+                                        3. Présence d'autres infections sexuellement transmissibles (IST) : <br>
+                                        - La présence d'IST, comme l'herpès, la gonorrhée ou la chlamydia, augmente la probabilité de contracter ou de transmettre le VIH, car elles causent des lésions sur les muqueuses génitales. <br><br>
+
+                                        4. Statut sérologique de son partenaire : <br>
+                                        - Avoir un partenaire qui est séropositif et qui ne suit pas un traitement antirétroviral efficace avec une charge virale indétectable augmente le risque de transmission. <br><br>
+
+                                        5. Non-adhérence au traitement antirétroviral : <br>
+                                        - Pour les personnes vivant avec le VIH, ne pas suivre correctement le traitement antirétroviral (ARV) peut entraîner une charge virale élevée, augmentant ainsi le risque de transmission du VIH. <br><br>
+
+                                        6. Facteurs socio-économiques : <br><br>
+                                        - Les personnes vivant dans des conditions socio-économiques précaires peuvent avoir moins accès aux soins de santé, à l'éducation, et aux méthodes de prévention, augmentant ainsi leur vulnérabilité au VIH. <br><br>
+                                    </p>
+
+                                    <h2 class="card-title" data-aos="fade-up" data-aos-delay="100">Conclusion</h2>
+                                    <p class="card-text" data-aos="fade-up" data-aos-delay="100">
+                                        Le VIH est une infection virale qui, si elle n'est pas contrôlée, peut évoluer en SIDA, une maladie grave qui affaiblit le système immunitaire. Cependant, grâce à des mesures de prévention efficaces comme l'utilisation de préservatifs, la PrEP, le dépistage régulier, et l'accès aux traitements antirétroviraux, il est possible de réduire considérablement le risque de transmission du VIH. Il est également important de sensibiliser les populations à risque et de promouvoir des comportements responsables pour lutter contre la propagation du virus. <br>
+                                    </p>
+                                    <br>
+                                    <br><br>
+                                    <video controls width="700">
+                                        <source src="" type="video/mp4" />
+                                    </video>
+                                    <br><br><br><br>
+                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Side widgets-->
+                        <div class="col-lg-4">
+                            <!-- Side widget-->
+                            <div class="card mb-4">
+                                <div class="card-header">Généralité sur le VIH</div>
+                                <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                                <a class="btn btn-primary" href="{% url 'generalite_vih' %}">Voir →</a>
+                            </div>
+                            <div class="card mb-4">
+                                <div class="card-header">Cycle de vie du VIH</div>
+                                <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                                <a class="btn btn-primary" href="{% url 'cycle_vih' %}">Voir →</a>
+                            </div>
+                            <div class="card mb-4">
+                                <div class="card-header">Qu'arrive-t-il au corps après l'infection à VIH ?</div>
+                                <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                                <a class="btn btn-primary" href="{% url 'apres_infection_vih' %}">Voir →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <!-- Footer-->
+        {% include "footer.html" %}
+
+    </body>
+</html>
+
+
+
+
+
