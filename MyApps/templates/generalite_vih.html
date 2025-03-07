@@ -22,9 +22,9 @@
                 <div class="container">
                     <div class="row">
                         <!-- Blog entries-->
-                        <div class="col-lg-8">
+                        <div class="col-lg-8" >
                             <!-- Featured blog post-->
-                            <div class="card mb-4">
+                            <div class="card mb-4" style="top: 1rem;">
                                 <a href="#!"><img class="card-img-top" src="{% static 'assets/img.jpeg' %}" alt="..." /></a>
                                 <div class="card-body">
                                     <h2 class="card-title" data-aos="fade-up" data-aos-delay="100">VIH : Définition</h2>
@@ -49,12 +49,12 @@
                                         Les travailleurs de la santé peuvent être exposés au VIH par des blessures accidentelles avec des aiguilles ou des instruments contaminés. <br>
                                     </p>
                                     <br>
-                                    <video controls width="700">
-                                    
-                                        <source src="" type="video/mp4" />
-                                    
-                                    </video>
-                                    <br><br><br><br>
+                                    <div>
+                                        <video controls width="100%">
+                                            <source src="" type="video/mp4" />
+                                        </video>
+                                    </div>
+                                    <br>
                                     <h2 class="card-title" data-aos="fade-up" data-aos-delay="100">Mode de prévention du VIH</h2>
                                     <p class="card-text" data-aos="fade-up" data-aos-delay="100">
                                         Il existe plusieurs méthodes pour prévenir l'infection par le VIH : <br><br>
@@ -74,42 +74,42 @@
                                         5. Circoncision masculine : <br>
                                         - La circoncision a montré qu'elle pouvait réduire le risque de transmission du VIH lors de rapports sexuels hétérosexuels, bien qu'elle ne fournisse pas une protection totale. <br><br>
                                     </p>
-                                    <br><br>
-                                    <video controls width="700">
-                                        <source src="" type="video/mp4" />
-                                    </video>
-                                    <br><br><br>
-                                    <a class="btn btn-primary" href="{% url 'generalite_vih' %}">Suivant →</a>
+                                    <div>
+                                        <video controls width="100%">
+                                            <source src="" type="video/mp4" />
+                                        </video>
+                                    </div>
+                                    <br>
+                                    <a class="btn btn-primary" href="{% url 'cycle_vih' %}">Suivant →</a>
                                 </div>
                             </div>
                         </div>
                         <!-- Side widgets-->
                         <div class="col-lg-4">
-                            <!-- Side widget-->
-                            <div class="card mb-4">
-                                <div class="card-header">Cycle de vie du VIH</div>
-                                <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
-                                <a class="btn btn-primary" href="{% url 'cycle_vih' %}">Voir →</a>
-                            </div>
-                            <div class="card mb-4">
-                                <div class="card-header">Comment le corps réagit-il face à l'infection du VIH ?</div>
-                                <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
-                                <a class="btn btn-primary" href="{% url 'reacton_corps_vih' %}">Voir →</a>
-                            </div>
-                            <div class="card mb-4">
-                                <div class="card-header">Qu'arrive-t-il au corps après l'infection à VIH ?</div>
-                                <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
-                                <a class="btn btn-primary" href="{% url 'apres_infection_vih' %}">Voir →</a>
+                            <div class="position-sticky" style="top: 3.7rem;">
+                                <!-- Side widget-->
+                                <div class="card mb-4">
+                                    <div class="card-header">Cycle de vie du VIH</div>
+                                    <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                                    <a class="btn btn-primary" href="{% url 'cycle_vih' %}">Voir →</a>
+                                </div>
+                                <div class="card mb-4">
+                                    <div class="card-header">Comment le corps réagit-il face à l'infection du VIH ?</div>
+                                    <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                                    <a class="btn btn-primary" href="{% url 'reacton_corps_vih' %}">Voir →</a>
+                                </div>
+                                <div class="card mb-4">
+                                    <div class="card-header">Qu'arrive-t-il au corps après l'infection à VIH ?</div>
+                                    <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                                    <a class="btn btn-primary" href="{% url 'apres_infection_vih' %}">Voir →</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
             
-        </main>
-
-
-        
+        </main>        
         <!-- Footer-->
         {% include "footer.html" %}
 

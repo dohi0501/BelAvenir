@@ -102,6 +102,51 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+.slideur_content{
+  max-width: 100%;
+  overflow: hidden;
+}
+.slideur{
+  display: flex;
+  flex-direction: row;
+}
+.slideur h1{
+  flex-shrink: 0;
+  width: 100%;
+}
+.defilement{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: stretch;
+}
+.defilement h1{
+  margin: 0;
+}
+@media (max-width: 400px) {
+  .logo_title{
+    font-size: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .responsive{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+  }
+  .col-10{
+    text-align: center;
+  }
+}
+.naviga
+.justifier{
+  text-align: justify;
+}
+.foot{
+  background-color: #2C3E50;
+}
 .titre{
   text-decoration: none;
 }
@@ -110,11 +155,11 @@ body {
 }
 .mouvement1{
   position: relative;
-  animation: h2 1s ease-in;
+  animation: h2 1.4s ease-in;
 }
 .mouvement2{
   position: relative;
-  animation: h3 1.2s ease-out;
+  animation: h3 1.4s ease-out;
 }
 .mouvement3{
   position: relative;
@@ -122,7 +167,7 @@ body {
 }
 @keyframes h2 {
   0%{ 
-      transform: translateX(-150px);
+      transform: translateX(-113px);
       opacity: 0;
   }
   100%{ 
@@ -133,7 +178,7 @@ body {
 
 @keyframes h3 {
   0%{ 
-      transform: translateX(150px);
+      transform: translateX(113px);
       opacity: 0;
   }
   100%{ 
@@ -258,7 +303,7 @@ strong {
 }
 
 small, .small {
-  font-size: .7em;
+  font-size: .5em;
 }
 
 mark, .mark {
@@ -3784,7 +3829,7 @@ textarea.form-control-lg {
 
 .naviga{
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
-  height: 70px;
+  height: 60px;
   position: relative;
 }
 
@@ -3842,6 +3887,7 @@ textarea.form-control-lg {
   text-decoration: none;
   white-space: nowrap;
 }
+
 .navbar-brand:hover, .navbar-brand:focus {
   color: var(--bs-navbar-brand-hover-color);
 }
@@ -6806,6 +6852,7 @@ textarea.form-control-lg {
 
 .link-light {
   color: #f8f9fa !important;
+  font-size: 1.3rem;
 }
 .link-light:hover, .link-light:focus {
   color: #f9fafb !important;
@@ -8392,7 +8439,7 @@ textarea.form-control-lg {
 
 .bg-white {
   --bs-bg-opacity: 1;
-  background-color: #ff0000;
+  background-color: #0dcafA;
 }
 
 .bg-body {
@@ -11631,7 +11678,7 @@ html {
 }
 
 .text-gradient {
-  background: -webkit-linear-gradient(315deg, #f31e1e 0%, #e21e80 100%);
+  background: -webkit-linear-gradient(250deg, #0d2af0 10%, #0dcaf0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

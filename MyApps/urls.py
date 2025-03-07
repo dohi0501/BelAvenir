@@ -11,4 +11,10 @@ urlpatterns = [
     path('vih/apres_infection_vih/', apres_infection_vih, name='apres_infection_vih'),
     # root pour les ist
     path('vih/generalite_ist/', generalite_ist, name='generalite_ist'),
+    # root a propos
+    path('apropos/', apropos, name='apropos'),
+    # root pour les projets
+    path('projets/', projets, name='projets'),
+    # Administration
+    path('login_Administration/', login_admin, name='login_admin')
 ]
