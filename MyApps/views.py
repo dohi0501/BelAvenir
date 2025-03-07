@@ -50,21 +50,39 @@ def login_admin(request, *args, **kwargs):
             user = authenticate(request, username=username, password=password)
 
             if user is not None:
-                login(request, user)
-                return redirect('administration', username=username)
+                try:
+                    login(request, user)
+                    return redirect('administration', username=username)
+                
+                except:
+                    erreur = 'une erreur est survenue!'
+                    return render(request, 'login_administration.html', {'form': form, 'error': erreur})
+
             
             else:
-                messages.error(request, 'une erreur est survenue lors de l\'exécution du programme!')
+                erreur = 'une erreur est survenue!'
+                return render(request, 'login_administration.html', {'form': form, 'error': erreur})
         
         else:
-            messages.error(request, 'nom ou mot de passe invalide!')
+            erreur = 'nom ou mot de passe invalide!'
+            return render(request, 'login_administration.html', {'form': form, 'error': erreur})
 
     else:
         form = AuthenticationForm()
         return render(request, 'login_administration.html', {'form': form})
+    
+
 
 @login_required(login_url='login_Administration/')
 @user_passes_test(is_admin)
 def administration (request, username, *args, **kwargs):
     user = User.objects.get(username=username)
     return render(request, 'administration.html', {'user': user})
+
+
+@login_required(login_url='login_Administration/')
+@user_passes_test(is_admin)
+def logout_user (request, *args, **kwargs):
+    logout(request)
+    return redirect('accueil')
+

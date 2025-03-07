@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+{% include "header.html" %}
+<body>
+    <section class="container">
+        <center>
+            <h1>
+                bonjour {{ user.username }}, vous êtes connecté ! <br>
+                <button class="btn btn-light">
+                    <a class="text-decoration-none" href="{% url 'logout' %}">Se déconnecter</a>
+                </button>
+            </h1>
+        </center>
+    </section>
+</body>
+</html>

@@ -102,17 +102,47 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #666;
+}
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fafafa;
+  transition: border-color 0.3s ease;
+}
+.form-group input:focus {
+  outline: none;
+}
 .slideur_content{
   max-width: 100%;
   overflow: hidden;
+  max-height: 420px;
 }
-.slideur{
+.slideur_content .slideur{
   display: flex;
   flex-direction: row;
+  animation: slide_show 20s infinite ease-in-out;
 }
 .slideur h1{
   flex-shrink: 0;
   width: 100%;
+}
+@keyframes slide_show{
+  0%, 20% {transform: translateX(0);}
+  25%, 45% {transform: translateX(-100%); }
+  50%, 70% {transform: translateX(-200%);}
+  75%, 95% {transform: translateX(-300%);}
+  100% {transform: translateX(-400%);}
 }
 .defilement{
   display: flex;
@@ -128,6 +158,9 @@ body {
     font-size: 20px;
   }
 }
+.responsive img{
+  max-height: 250px;
+}
 @media (max-width: 800px) {
   .responsive{
     display: flex;
@@ -135,6 +168,10 @@ body {
     justify-content: center;
     align-items: center;
     max-width: 800px;
+  }
+  .responsive img{
+    max-width: 100%;
+    margin: 0 auto;
   }
   .col-10{
     text-align: center;
@@ -167,18 +204,18 @@ body {
 }
 @keyframes h2 {
   0%{ 
-      transform: translateX(-113px);
-      opacity: 0;
+    transform: translateX(-100px);
+    opacity: 0;
   }
   100%{ 
-      transform: translateX(0px);
-      opacity: 1;
+    transform: translateX(0px);
+    opacity: 1;
   }
 }
 
 @keyframes h3 {
   0%{ 
-      transform: translateX(113px);
+      transform: translateX(100px);
       opacity: 0;
   }
   100%{ 
