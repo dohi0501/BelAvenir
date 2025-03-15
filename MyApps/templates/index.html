@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="fr">
-    {% include "header.html" %}
+    {% include "header.html" with mon_titre='Accueil' %}
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
             <!-- Navigation-->
-            {% include "navbar.html" %}
-            <!-- Header-->
-            <header class="header_slide">
+            <header class="header_slide" style="display: flex; height: 100vh; flex-direction: column;">
+                {% include "navbar.html" %}
                 <div class="container pb-5">
                     <div class="row gx- align-items-center">
                         <div class="col-xxl-4">
                             <!-- Header text content-->
                             <div class="text-center text-xxl-start mb-4 py-5 slideur_content">
                                 <div class="fs-2 fw-light text-muted mb-4 mouvement1">le VIH détruit des vies innocentes</div>
-                                <div class="defilement slideur mouvement2">
-                                    <h1 class="display-3 fw-bolder"><span class="text-gradient d-inline">Luttons ensemble pour éliminer le VIH d'ici 2030</span></h1>
+                                <div class="defilement slideur">
+                                    <h1 class="display-3 fw-bolder mouvement4"><span class="text-gradient d-inline">Luttons ensemble pour éliminer le VIH d'ici 2030</span></h1>
                                     <h1 class="display-3 fw-bolder"><span class="text-gradient d-inline">Luttons ensemble pour éliminer le VIH d'ici 2030</span></h1>
                                     <h1 class="display-3 fw-bolder"><span class="text-gradient d-inline">Luttons Luttons Luttons Luttons ensemble pour éliminer le VIH d'ici 2030</span></h1>
                                     <h1 class="display-3 fw-bolder"><span class="text-gradient d-inline">Luttons ensemble pour éliminer le VIH d'ici 2030</span></h1>
@@ -23,8 +22,7 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-0" data-aos="fade-up" data-aos-delay="100">
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-0 mouvement5">
                             <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="#visite">Visiter</a>
                             <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="{% url 'projets' %}">Projects</a>
                         </div>
@@ -32,44 +30,59 @@
                 </div>
             </header>
             <!-- About Section-->
-            <section class="bg-light py-5" id="visite">
-                <br><br>
-                <div class="container">
-                    <div class="row gx-4 gx-lg-5" id="informations">
-                        <div class="col-md-4 mb-5" data-aos="fade-up" data-aos-delay="200">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h2 class="card-title">Le VIH Sida ?</h2>
-                                    <p class="card-text">Le VIH (Virus de l'Immunodéficience Humaine) est un virus qui attaque le système immunitaire, en particulier les cellules CD4 (un type de globules blancs), affaiblissant ainsi la capacité du corps à combattre les infections et certaines maladies...</p>
-                                </div>
-                                <div class="card-footer"><a class="btn btn-primary btn-sm" href="{% url 'generalite_vih' %}">Voir les détails</a></div>
+            <section class="bg" id="visite">
+                <div class="container col-xxl-8 px-4 py-1">
+                    <div class="row flex-lg-row-reverse align-items-center g-5 py-5" data-aos="fade-up" data-aos-delay="200">
+                        <div class="col-sm-8 col-lg-6">
+                            <img src="{% static 'assets/lutte1.jpg' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" style="max-height: 100%; margin: 0 auto;" loading="lazy">
+                        </div>
+                        <div class="col-lg-6">
+                            <h1 class="display-5 fw-bold lh-1 mb-3">Généralité sur le VIH.</h1>
+                            <p class="lead">Le VIH (Virus de l'Immunodéficience Humaine) est un virus qui attaque le système immunitaire, en particulier les cellules CD4 (un type de globules blancs), affaiblissant ainsi la capacité du corps à combattre les infections et certaines maladies...</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <a href="{% url 'generalite_vih' %}" class="btn btn-outline-primary btn-lg px-4">lire la suite</a>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-5" data-aos="fade-up" data-aos-delay="200">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h2 class="card-title">Les IST ?</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
-                                </div>
-                                <div class="card-footer"><a class="btn btn-primary btn-sm" href="{% url 'generalite_ist' %}">Voir les détails</a></div>
+                    </div>
+                </div>
+                <div class="container col-xxl-8 px-4 py-1">
+                    <div class="row flex-lg-row-reverse align-items-center g-5 py-5" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col-sm-8 col-lg-6">
+                            <img src="{% static 'assets/lutte2.png' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" style="max-height: 100%; margin: 0 auto" loading="lazy">
+                        </div>
+                        <div class="col-lg-6">
+                            <h1 class="display-5 fw-bold lh-1 mb-3">Généralité sur les IST.</h1>
+                            <p class="lead">Les Infections Sexuellement Transmissibles (IST) sont des infections qui se transmettent par contact sexuel. Elles sont causées par des agents pathogènes tels que des virus, des bactéries ou des parasites...</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <a href="{% url 'generalite_ist' %}" class="btn btn-outline-primary btn-lg px-4">lire la suite</a>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-5" data-aos="fade-up" data-aos-delay="200">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h2 class="card-title">Le Dépistage ?</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
-                                </div>
-                                <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+                    </div>
+                </div>
+                <div class="container col-xxl-8 px-4 py-1">
+                    <div class="row flex-lg-row-reverse align-items-center g-5 py-5" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col-sm-8 col-lg-6 align-items-center">
+                            <img src="{% static 'assets/3.jpg' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" style="max-height: 100%; margin: 0 auto" loading="lazy">
+                        </div>
+                        <div class="col-lg-6">
+                            <h1 class="display-5 fw-bold lh-1 mb-3">Qu'est-ce que le Dépistage ?</h1>
+                            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <button type="button" href="" class="btn btn-outline-primary btn-lg px-4">lire la suite</button>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-5" data-aos="fade-up" data-aos-delay="200">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h2 class="card-title">La Charge Virale</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
-                                </div>
-                                <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+                    </div>
+                </div>
+                <div class="container col-xxl-8 px-4 py-1">
+                    <div class="row flex-lg-row-reverse align-items-center g-5 py-5" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col-sm-8 col-lg-6">
+                            <img src="{% static 'assets/4.jpg' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" style="max-height: 100%; margin: 0 auto" loading="lazy">
+                        </div>
+                        <div class="col-lg-6">
+                            <h1 class="display-5 fw-bold lh-1 mb-3">Qu'est-ce que la charge virale</h1>
+                            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <button type="button" href="" class="btn btn-outline-primary btn-lg px-4">lire la suite</button>
                             </div>
                         </div>
                     </div>
@@ -108,43 +121,36 @@
             
             <section id="actualites" class="bg-light py-5">
                 <div class="container marketing">
-                    <h2 class="card-title" style="padding-top: 45px;">L'Actualité</h2>
+                    <h2 class="card-title" style="padding-top: 45px;">L'Actualité sur les rapports de formation</h2>
                     <hr class="featurette-divider">
                     <!-- START THE FEATURETTES -->
-                    <div class="row featurette" data-aos="fade-left" data-aos-delay="300">
-                        <div class="col-md-7">
-                            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-                            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+                    {% for rap in rapport %}
+                        <div class="row featurette mb-3" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-md-7">
+                                <span class="mb-3">Poster le {{rap.save_date}} <span class="text-muted"> Par {{rap.save_by}}.</span></span>
+                                <h2 class="featurette-heading"><span class="text-muted">{{rap.titre}}</span></h2>
+                                <p class="lead py-3">{{rap.description}}...</p>
+                                <p>Date et lieu de la formation : Du {{rap.date_debut}} au {{rap.date_fin}} à {{rap.lieu}}</p>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                    <a href="{% url 'generalite_vih' %}" class="btn btn-outline-primary btn-lg px-4">lire la suite</a>
+                                </div>
+                            </div>
+                            <div class="col-md-5 style="width: 500px; height: 400px;"">
+                                <img src="{{ rap.img_formation.url }}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="width: 500px; height: 400px;" alt="image de la formation">
+                            </div>
                         </div>
-                        <div class="col-md-5">
-                            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-                        </div>
-                    </div>
-                
-                    <hr class="featurette-divider" >
-                    <div class="row featurette" data-aos="fade-right" data-aos-delay="300">
-                        <div class="col-md-7 order-md-2">
-                            <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-                            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-                        </div>
-                        <div class="col-md-5 order-md-1">
-                            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-                        </div>
-                    </div>
-                
-                    <hr class="featurette-divider">
-                    <div class="row featurette" data-aos="fade-left" data-aos-delay="300">
-                        <div class="col-md-7">
-                            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-                            <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-                        </div>
-                        <div class="col-md-5">
-                            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-                        </div>
-                    </div>
-                
-                    <hr class="featurette-divider">
-                    <!-- /END THE FEATURETTES -->
+                        <hr class="featurette-divider mb-3">
+                        <!-- <hr class="featurette-divider" >
+                        <div class="row featurette" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-md-7 order-md-2">
+                                <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+                                <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+                            </div>
+                            <div class="col-md-5 order-md-1">
+                                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                            </div>
+                        </div> -->
+                    {% endfor %}
                 
                   </div>
             </section>

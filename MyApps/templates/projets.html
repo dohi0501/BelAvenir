@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="fr">
-    {% include "header.html" %}
+    {% include "header.html" with mon_titre='Nos projects' %}
     <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
             <!-- Navigation-->
@@ -130,7 +130,7 @@
                 <div class="container px-5 my-5">
                     <div class="text-center">
                         <h2 class="display-5 fw-bolder mb-4">Construisons quelque chose ensemble</h2>
-                        <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="#contact">Contact me</a>
+                        <p class="btn btn-outline-light px-5 py-3 fs-6 fw-bolder">Contactez nous</p>
                     </div>
                 </div>
             </section>

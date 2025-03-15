@@ -105,13 +105,17 @@ body {
 .form-group {
   margin-bottom: 20px;
 }
-.form-group label {
+.form-group1 {
+  width: 50%;
+  margin-bottom: 20px;
+}
+.form-group label, .form-group1 label{
   display: block;
   font-size: 14px;
-  margin-bottom: 8px;
+  margin-bottom: 3px;
   color: #666;
 }
-.form-group input {
+.form-group input, .form-group1 input, .form-group textarea, .form-group1 select, .form-group select{
   width: 100%;
   padding: 12px;
   border: 1px solid #ddd;
@@ -120,13 +124,30 @@ body {
   background: #fafafa;
   transition: border-color 0.3s ease;
 }
-.form-group input:focus {
+.form-group input:focus, .form-group1 input:focus, .form-group textarea:focus, .form-group1 select:focus, .form-group select:focus {
   outline: none;
+}
+.input_flex{
+  display: flex;
+  gap: 15px;
+}
+@media (max-width: 991px) {
+  .input_flex{
+    display: block;
+  }
+  .form-group1{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .form-group{
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 .slideur_content{
   max-width: 100%;
   overflow: hidden;
-  max-height: 420px;
+  max-height: 400px;
 }
 .slideur_content .slideur{
   display: flex;
@@ -177,7 +198,6 @@ body {
     text-align: center;
   }
 }
-.naviga
 .justifier{
   text-align: justify;
 }
@@ -188,7 +208,10 @@ body {
   text-decoration: none;
 }
 .header_slide{
+  display: flex;
+  flex-direction: column;
   margin: 0;
+  height: 100%;
 }
 .mouvement1{
   position: relative;
@@ -201,6 +224,14 @@ body {
 .mouvement3{
   position: relative;
   animation: h2 1.6s ease;
+}
+.mouvement4{
+  position: relative;
+  animation: h4 .7s ease;
+}
+.mouvement5{
+  position: relative;
+  animation: h5 .8s ease;
 }
 @keyframes h2 {
   0%{ 
@@ -220,6 +251,26 @@ body {
   }
   100%{ 
       transform: translateX(0px);
+      opacity: 1;
+  }
+}
+@keyframes h4 {
+  0%{ 
+      transform: translateY(-30px);
+      opacity: 0;
+  }
+  100%{ 
+      transform: translateY(0px);
+      opacity: 1;
+  }
+}
+@keyframes h5 {
+  0%{ 
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100%{ 
+      transform: translateY(0px);
       opacity: 1;
   }
 }
@@ -441,9 +492,9 @@ caption {
 }
 
 th {
-  text-align: center;
+  text-align: start;
   text-align: -webkit-match-parent;
-  font-weight: 400;
+  font-weight: 500;
   
 }
 
@@ -3752,6 +3803,15 @@ textarea.form-control-lg {
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
+.nav-link1 {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: 14px;
+  font-weight: var(--bs-nav-link-font-weight);
+  color: rgba(0, 12, 15, 0.534);
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
 .nav-link::after {
   content: '';
   display: block;
@@ -3762,13 +3822,31 @@ textarea.form-control-lg {
   left: 0;
   transition:  .3s ease-in-out;
 }
+.nav-link1::after {
+  content: '';
+  display: block;
+  height: 2.5px;
+  width: 0%;
+  background-color: rgba(0, 12, 15, 0.37);
+  border-radius: 4px;
+  left: 0;
+  transition:  .3s ease-in-out;
+}
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     transition: none;
   }
 }
+@media (prefers-reduced-motion: reduce) {
+  .nav-link1 {
+    transition: none;
+  }
+}
 .nav-link:hover, .nav-link:focus {
   color: rgba(255, 255, 255, 0.856);
+}
+.nav-link1:hover, .nav-link1:focus {
+  color: rgba(0, 12, 15, 0.527);
 }
 .nav-link:hover::after, .nav-link:focus::after {
   width: 100%;
@@ -3866,7 +3944,7 @@ textarea.form-control-lg {
 
 .naviga{
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
-  height: 60px;
+  height: 65px;
   position: relative;
 }
 
@@ -3896,7 +3974,6 @@ textarea.form-control-lg {
   left: 0;
   right: 0;
   z-index: 100;
-  box-shadow: rgba(15, 19, 51, 0.212) 0px 1px 1px -1px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -8341,7 +8418,6 @@ textarea.form-control-lg {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
 }
-.naviga
 
 .text-secondary {
   --bs-text-opacity: 1;
